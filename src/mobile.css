@@ -1,0 +1,480 @@
+@media (max-width: 992px) {
+
+  @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap");
+
+  body {
+    background-color: #131315;
+  }
+
+  /* utilities */
+  * {
+    font-family: outfit;
+    color: white;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    color: grey;
+    letter-spacing: 5px;
+  }
+
+  body a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    color: #a555ed;
+  }
+
+  /* utilities */
+
+  /* navbar */
+  .navbar {
+    text-align: center;
+  }
+
+  .navbar .navbar-brand img {
+    width: 120px;
+  }
+
+  .navbar .nav-link {
+    margin-right: 0;
+  }
+
+  .navbar .btn {
+    background: linear-gradient(to right, #a555ed, #7800e3);
+    width: 130px;
+    font-weight: 600;
+    margin: auto;
+  }
+
+  .navbar .btn:hover {
+    background: none;
+    border: 1px solid #a555ed;
+    color: white;
+  }
+
+  .navbar .nav-link:hover {
+    color: #a555ed;
+  }
+
+  /* navbar */
+
+  /* hero */
+  #hero .nav {
+    margin-top: 20px;
+  }
+
+  #hero .nav .nav-link {
+    color: white;
+    margin-right: 20px;
+  }
+
+  #hero .nav .active {
+    background: none;
+    border: 1px solid #a555ed;
+  }
+
+  #hero .carousel-inner {
+    border-radius: 20px;
+  }
+
+  #hero .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  #hero #pills-discover .card {
+    background: none;
+    border: none;
+  }
+
+  #hero .card img {
+    border-radius: 20px;
+  }
+
+  #hero #pills-popular .reccommended .card {
+    background: none;
+    border: none;
+  }
+
+  #hero #pills-popular .free-games .card {
+    background: none;
+    border: none;
+  }
+
+  /* hero */
+
+  /* about */
+  #about h1 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  /* about */
+
+  /* detail page */
+
+  #detail {
+    color: white;
+  }
+
+  #detail .breadcrumb a {
+    text-decoration: none;
+    color: #a555ed;
+  }
+
+  #detail img {
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  #detail h6 {
+    color: grey;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+  #detail h1 {
+    font-weight: 600;
+  }
+
+  #detail table {
+    width: 100%;
+  }
+
+  #detail table th {
+    color: grey;
+  }
+
+  #detail .trigger .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #detail .buy {
+    background: linear-gradient(to right, #a555ed, #7800e3);
+    border: none;
+    color: white;
+  }
+
+  #detail .modal .btn {
+    background: linear-gradient(to right, #a555ed, #7800e3);
+    border: none;
+    color: white;
+    width: 50%;
+  }
+
+  #detail .modal-body {
+    padding: 30px;
+  }
+
+  #detail .modal .btn {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #detail .modal .btn-close {
+    margin-left: auto;
+    display: flex;
+  }
+
+  #detail .cost {
+    color: #a555ed;
+  }
+
+  /* detail page */
+  /* news page */
+  #news .btn {
+    background: linear-gradient(to right, #a555ed, #7800e3);
+    border: none;
+    color: white;
+    width: 120px;
+  }
+
+  #news .btn:hover {
+    background: none;
+    border: 1px solid #a555ed;
+  }
+
+  #news .card img {
+    border-radius: 20px;
+  }
+
+  #news .card a {
+    text-decoration: none;
+  }
+
+  #news .card small {
+    color: grey;
+  }
+
+  /* news page */
+
+  /* news */
+
+  #news-detail .card {
+    background: none;
+    border: none;
+  }
+
+  #news-detail .card small {
+    color: grey;
+  }
+
+  /* news */
+
+  /* cart */
+
+  #cart .card a {
+    text-decoration: none;
+    text-align: center;
+  }
+
+  #cart .card-title h6 {
+    padding: 0;
+  }
+
+  /* Scan */
+  #scan a {
+    text-decoration: none;
+  }
+
+  #scan .qr-code {
+    width: 100%;
+  }
+
+  #scan .card {
+    border-radius: 20px;
+  }
+
+  #scan .card img {
+    border-radius: 20px;
+  }
+
+  /* /scan */
+
+  /* confirm */
+  #confirm .breadcrumb a {
+    color: #6ea8fe;
+  }
+
+  #confirm a:hover {
+    text-decoration: none;
+    color: #7800e3;
+  }
+
+  #confirm .card {
+    border-radius: 20px;
+  }
+
+  #confirm .card img {
+    border-radius: 20px;
+  }
+
+  /* confirm */
+
+  /* libary page */
+  #account .card {
+    padding: 30px;
+  }
+
+  .list-game .card {
+    margin-top: 10px;
+  }
+
+  /* libary page */
+
+  /* sales & special */
+  #sales .onsale .card {
+    background: none;
+    border: none;
+  }
+
+  #sales .onsale .card img {
+    border-radius: 20px;
+  }
+
+  #sales .special .card {
+    border: none;
+    background: none;
+  }
+
+  #sales .special .card img {
+    border-radius: 20px;
+  }
+
+  #sales .special .card-img-overlay {
+    background: linear-gradient(to right,
+        rgba(0, 0, 0, 0.584),
+        rgba(0, 0, 0, 0));
+  }
+
+  #sales .special .deskripsi {
+    position: absolute;
+    bottom: 5px;
+  }
+
+  /* sales & special */
+
+  /* success */
+  #success {
+    color: white;
+  }
+
+  #success h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+  }
+
+  #success .card {
+    border-radius: 20px;
+  }
+
+  #success .card img {
+    border-radius: 20px;
+  }
+
+  #success .status {
+    display: inline;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  #success .card-text {
+    display: flex;
+    justify-content: center;
+  }
+
+  #success table {
+    width: 50%;
+  }
+
+  #success .download {
+    background: linear-gradient(to right, #a555ed, #7800e3);
+    border: none;
+    color: white;
+  }
+
+  #success .btn {
+    margin-right: 20px;
+  }
+
+  #success .free-games .card {
+    background: none;
+    color: white;
+  }
+
+  #success .free-games a {
+    text-decoration: none;
+  }
+
+  /* success */
+
+  /* free game */
+  #freegame .card {
+    background: none;
+    border: none;
+  }
+
+  #freegame .card img {
+    border-radius: 20px;
+  }
+
+  /* free game */
+
+  /* login */
+  #login {
+    color: white;
+  }
+
+  #login a {
+    text-decoration: none;
+  }
+
+  #login h5 {
+    text-align: center;
+  }
+
+  #login p {
+    text-align: center;
+  }
+
+  .bg-login {
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0px 0px 15px 10px #a555ed;
+  }
+
+  .bg-login .btn {
+    background: linear-gradient(to right, #a555ed, #7800e3);
+    border: none;
+    color: white;
+  }
+
+  /* login */
+
+  /* signup */
+  #signup {
+    margin-top: 50px;
+    color: white;
+  }
+
+  #signup a {
+    text-decoration: none;
+  }
+
+  #signup h5 {
+    text-align: center;
+  }
+
+  #signup p {
+    text-align: center;
+  }
+
+  .bg-signup {
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0px 0px 15px 10px #a555ed;
+  }
+
+  .bg-signup .btn {
+    background: linear-gradient(to right, #a555ed, #7800e3);
+    border: none;
+    color: white;
+  }
+
+  /* signup */
+
+  /* footer */
+  footer {
+    padding: 30px 30px;
+    margin-top: 30px;
+  }
+
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer li {
+    display: inline;
+    padding-right: 20px;
+  }
+
+  footer .copyright-text {
+    color: grey;
+    text-align: start;
+    margin-top: 10px;
+  }
+
+  /* footer */
+}
