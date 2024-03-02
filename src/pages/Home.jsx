@@ -6,6 +6,7 @@ import NavbarComp from "../components/NavbarComp";
 import Reccommended from '../components/Reccommended';
 import Footer from '../components/Footer';
 import FreeGame from '../components/FreeGame';
+import OnSale from '../components/OnSale';
 
 const Home = () => {
     const [activeKey, setActiveKey] = useState('discover');
@@ -22,7 +23,7 @@ const Home = () => {
     const renderContent = () => {
         if (activeKey === "discover") {
             return (
-                <div>
+                <div id='hero'>
                     <Row>
                         <Carousel className='mt-5' activeIndex={index} onSelect={handleCarouselSelect}>
                             <Carousel.Item>
@@ -65,44 +66,8 @@ const Home = () => {
                     </Row>
 
                     <Row className='mt-5'>
-                        <Col lg={4}>
-                            <Card style={{ width: '100%' }} data-bs-theme="dark">
-                                <Card.Img variant="top" src="../src/assets/image4.png" className='card-image' />
-                                <Card.Body>
-                                    <a href="/DetailPage" className="game-title">
-                                        <h5>Resident Evil 4</h5>
-                                    </a>
-                                    <h6 className="subtitle">on sale</h6>
-                                    <h4 className="cost">IDR 200.000</h4>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col lg={4}>
-                            <Card style={{ width: '100%' }} data-bs-theme="dark">
-                                <Card.Img variant="top" src="../src/assets/image5.png" className='card-image' />
-                                <Card.Body>
-                                    <a href="/DetailPage" className="game-title">
-                                        <h5>The Last Of Us Part II</h5>
-                                    </a>
-                                    <h6 className="subtitle">on sale</h6>
-                                    <h4 className="cost">IDR 200.000</h4>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col lg={4}>
-                            <Card style={{ width: '100%' }} data-bs-theme="dark">
-                                <Card.Img variant="top" src="../src/assets/image6.png" className='card-image' />
-                                <Card.Body>
-                                    <a href="/DetailPage" className="game-title">
-                                        <h5>Dying Light 2</h5>
-                                    </a>
-                                    <h6 className="subtitle">on sale</h6>
-                                    <h4 className="cost">IDR 200.000</h4>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                        <OnSale/>
                     </Row>
-
                     <Row>
                         <Reccommended />
                     </Row>
@@ -164,9 +129,8 @@ const Home = () => {
             );
         } else if (activeKey === "popular") {
             return (
-                <div>
+                <div id='hero'>
                     <Reccommended />
-
                     <Row>
                         <Col>
                             <Card className="mt-5 bg-dark" data-bs-theme="dark" style={{width: '100%', borderRadius: '20px'}}>
@@ -195,7 +159,6 @@ const Home = () => {
                             </Card>
                         </Col>
                     </Row>
-
                     <FreeGame />
                 </div>
             );
