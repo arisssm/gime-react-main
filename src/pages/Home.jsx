@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Nav, Container, Row, Col, Form, Carousel, Image, Card } from 'react-bootstrap';
 
 // import component
@@ -35,7 +35,7 @@ const Home = () => {
                                 <Carousel.Caption>
                                     <h5><b>Hitman III : Death Awaits</b></h5>
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-                                    <a href="/DetailPage" class="btn btn-outline-light">Buy Now!</a>
+                                    <a href="/DetailPage" className="btn btn-outline-light">Buy Now!</a>
                                 </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
@@ -47,7 +47,7 @@ const Home = () => {
                                 <Carousel.Caption>
                                     <h5><b>Forza Horizon 5</b></h5>
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-                                    <a href="/DetailPage" class="btn btn-outline-light">Buy Now!</a>
+                                    <a href="/DetailPage" className="btn btn-outline-light">Buy Now!</a>
                                 </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
@@ -59,7 +59,7 @@ const Home = () => {
                                 <Carousel.Caption>
                                     <h5><b>EA Sport : FC 24</b></h5>
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-                                    <a href="/DetailPage" class="btn btn-outline-light">Buy Now!</a>
+                                    <a href="/DetailPage" className="btn btn-outline-light">Buy Now!</a>
                                 </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
@@ -170,7 +170,7 @@ const Home = () => {
 
     return (
         <div>
-            <NavbarComp />
+            <NavbarComp/>
             <Container className="mt-3">
                 <Row>
                     <Col lg={3}>
