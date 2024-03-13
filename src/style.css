@@ -91,6 +91,14 @@ a:hover {
   background: none !important;
   border: none !important;
 }
+#hero .btn:hover {
+  background: #a555ed;
+  border: 1px solid #a555ed;
+  color: white;
+}
+#hero .btn{
+  color: white;
+}
 /* hero */
 
 /* about */
@@ -171,6 +179,12 @@ a:hover {
 }
 
 /* detail page */
+#order .btn {
+  background: linear-gradient(to right, #a555ed, #7800e3);
+  border: none;
+  color: white;
+  width: 120px;
+}
 /* news page */
 #news .btn {
   background: linear-gradient(to right, #a555ed, #7800e3);
