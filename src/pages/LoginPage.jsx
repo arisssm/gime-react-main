@@ -21,7 +21,7 @@ const LoginPage = () => {
         try{
             const data = {
                 username: username,
-                password: password
+                password: password,
             };
             const res = await axios.post('http://127.0.0.1:3000/api/login', data);
             const decode = jwtDecode(res.data.token);

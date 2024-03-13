@@ -9,12 +9,12 @@ const Footer = () => {
                         <div className="link">
                             <h6 className="subtitle">quick link</h6>
                             <ul>
-                                <li><a href="/AboutPage">About</a></li>
-                                <li><a href="/NewsPage">News</a></li>
+                                <li><a href="/aboutpage">About</a></li>
+                                <li><a href="/newspage">News</a></li>
                                 <li><a href="/home">Discover</a></li>
                                 <li><a href="/popular">Popular</a></li>
-                                <li><a href="/SalesPage">Sales & Special</a></li>
-                                <li><a href="/SalesPage">Free Games</a></li>
+                                <li><a href="/salespage">Sales & Special</a></li>
+                                <li><a href="/freegamepage">Free Games</a></li>
                             </ul>
                         </div>
                     </Col>

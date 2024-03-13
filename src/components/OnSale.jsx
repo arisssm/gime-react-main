@@ -1,45 +1,42 @@
+import { useEffect, useState } from "react";
 import {Row, Col, Card} from "react-bootstrap";
-
+import axios from "axios";
 const OnSale = () => {
+    const [dataSale, setDataSale] =  useState([]);
+
+    // object = 1. array 2. json
+
+    useEffect(() => {
+        getDataGame();
+    }, []);
+    const getDataGame = async() => {
+        try{
+            const response = await axios.get('http://127.0.0.1:3000/api/game');
+            setDataSale( await response.data);
+            // console.log(response.data);
+        } catch(error){
+            console.log(error.message);
+        }
+    }
+
     return (
         <div>
             <Row>
-                <Col lg={4}>
-                    <Card style={{ width: '100%' }} data-bs-theme="dark">
-                        <Card.Img variant="top" src="../src/assets/image4.png" className='card-image' />
-                        <Card.Body>
-                            <a href="/DetailPage" className="game-title">
-                                <h5>Resident Evil 4</h5>
-                            </a>
-                            <h6 className="subtitle">on sale</h6>
-                            <h4 className="cost">IDR 200.000</h4>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col lg={4}>
-                    <Card style={{ width: '100%' }} data-bs-theme="dark">
-                        <Card.Img variant="top" src="../src/assets/image5.png" className='card-image' />
-                        <Card.Body>
-                            <a href="/DetailPage" className="game-title">
-                                <h5>The Last Of Us Part II</h5>
-                            </a>
-                            <h6 className="subtitle">on sale</h6>
-                            <h4 className="cost">IDR 200.000</h4>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col lg={4}>
-                    <Card style={{ width: '100%' }} data-bs-theme="dark">
-                        <Card.Img variant="top" src="../src/assets/image6.png" className='card-image' />
-                        <Card.Body>
-                            <a href="/DetailPage" className="game-title">
-                                <h5>Dying Light 2</h5>
-                            </a>
-                            <h6 className="subtitle">on sale</h6>
-                            <h4 className="cost">IDR 200.000</h4>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                {
+                    dataSale.filter(data => data.isOnSale).map((data, index) => (
+                            <Col lg={4} key={index}>
+                            <Card style={{ width: '100%' }} data-bs-theme="dark">
+                                <Card.Img variant="top" src={`http://127.0.0.1:3000/images/${data.cover}`} className='card-image' />
+                                <Card.Body>
+                                    <a href={`/detailpage/${data._id}`} className="game-title">
+                                        <h5>{data.name}</h5>
+                                    </a>
+                                    <h4 className="cost">IDR {data.price}</h4>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    ))
+                }
             </Row>
         </div>
     );

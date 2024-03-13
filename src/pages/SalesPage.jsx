@@ -2,8 +2,23 @@ import NavbarComp from "../components/NavbarComp";
 import Footer from "../components/Footer";
 import OnSale from "../components/OnSale";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const SalesPage = () => {
+    const [specialGame, setSpecialGame] = useState([]);
+    const getGame = async() => {
+        try{
+            const response = await axios.get('http://127.0.0.1:3000/api/game');
+            setSpecialGame( await response.data);
+            // console.log(response.data);
+        } catch(error){ 
+            console.log(error.message);
+        }
+    }
+    useEffect(() => {
+        getGame();
+    }, []);
     return (
         <div>
             <NavbarComp />
@@ -11,39 +26,28 @@ const SalesPage = () => {
                 <Container>
                     <h5 className='mt-3'>Now On Sale</h5>
                     <OnSale />
-
                     <div className='special'>
+                    <h5 className='mt-3'>Special Game</h5>
                         <Row>
-                            <Col lg={6}>
-                                <Card className="bg-dark text-white mt-5">
-                                    <Card.Img src="../src/assets/image-sale1.png" alt="Card image" />
+                        {
+                            specialGame.filter(data => data.isSpecialOffer).map((data, index)=>(
+                            <Col lg={6} key={index}>
+                                <Card className="bg-dark text-white">
+                                    <Card.Img src={`http://127.0.0.1:3000/images/${data.cover}`} alt="Card image" />
                                     <Card.ImgOverlay>
                                         <div className='deskripsi'>
-                                            <Card.Title>Mortal Kombat 1</Card.Title>
+                                            <Card.Title>{data.name}</Card.Title>
                                             <Card.Text>
-                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                {data.description}
                                             </Card.Text>
-                                            <h4 class="cost">IDR 200.000 </h4>
-                                            <a href="/DetailPage" class="btn btn-outline-light mt-3">Buy Now</a>
+                                            <h4 className="cost">IDR {data.price}</h4>
+                                            <a href={`/detailpage/${data._id}`} className="btn btn-outline-light mt-3">Buy Now</a>
                                         </div>
                                     </Card.ImgOverlay>
                                 </Card>
                             </Col>
-                            <Col lg={6}>
-                                <Card className="bg-dark text-white mt-5">
-                                    <Card.Img src="../src/assets/image-sale2.png" alt="Card image" />
-                                    <Card.ImgOverlay>
-                                        <div className='deskripsi'>
-                                            <Card.Title>Assassins Creed : Mirage</Card.Title>
-                                            <Card.Text>
-                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                            </Card.Text>
-                                            <h4 class="cost">IDR 200.000 </h4>
-                                            <a href="/DetailPage" class="btn btn-outline-light mt-3">Buy Now</a>
-                                        </div>
-                                    </Card.ImgOverlay>
-                                </Card>
-                            </Col>
+                            ))
+                        }
                         </Row>
                     </div>
                 </Container>
